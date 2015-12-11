@@ -1,0 +1,840 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="Bpo-Qx-fD0">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Resolution" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="jE7-hu-dQV">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <view key="tableHeaderView" contentMode="scaleToFill" id="6HU-vD-uXS">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="102"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <subviews>
+                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LWA-iz-kqo">
+                                            <rect key="frame" x="8" y="36" width="304" height="30"/>
+                                            <animations/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="30" id="eOc-6h-SY6"/>
+                                            </constraints>
+                                            <color key="textColor" red="0.32156862749999998" green="0.29411764709999999" blue="0.91372549020000005" alpha="1" colorSpace="calibratedRGB"/>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue-Italic" family="Helvetica Neue" pointSize="17"/>
+                                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                        </textView>
+                                    </subviews>
+                                    <animations/>
+                                    <color key="backgroundColor" red="0.96248759917989424" green="0.96248759917989424" blue="0.96248759917989424" alpha="1" colorSpace="calibratedRGB"/>
+                                    <constraints>
+                                        <constraint firstItem="LWA-iz-kqo" firstAttribute="centerY" secondItem="6HU-vD-uXS" secondAttribute="centerY" id="0kD-7G-uaX"/>
+                                        <constraint firstAttribute="trailing" secondItem="LWA-iz-kqo" secondAttribute="trailing" constant="8" id="m0a-fK-x5m"/>
+                                        <constraint firstItem="LWA-iz-kqo" firstAttribute="leading" secondItem="6HU-vD-uXS" secondAttribute="leading" constant="8" id="wTm-m9-ihS"/>
+                                    </constraints>
+                                </view>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N4V-sJ-kbF">
+                                <rect key="frame" x="220" y="409" width="80" height="80"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="DxQ-hk-shk"/>
+                                    <constraint firstAttribute="width" constant="80" id="KPj-jc-oxt"/>
+                                </constraints>
+                                <state key="normal" image="add_button.png"/>
+                                <connections>
+                                    <segue destination="3ve-zg-E00" kind="modal" identifier="addNewGoalSegue" id="yv1-in-UYP"/>
+                                </connections>
+                            </button>
+                            <textView hidden="YES" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Tap the &quot;+&quot; button below to add some weekly goals!" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="81S-Uc-Cqw">
+                                <rect key="frame" x="24" y="211" width="272" height="83"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="83" id="qUK-LK-nYs"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="20"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="81S-Uc-Cqw" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="8x6-Am-jPX"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="N4V-sJ-kbF" secondAttribute="bottom" constant="15" id="Bot-uC-XMS"/>
+                            <constraint firstAttribute="trailing" secondItem="N4V-sJ-kbF" secondAttribute="trailing" constant="20" id="CHu-Mp-pAM"/>
+                            <constraint firstAttribute="trailing" secondItem="81S-Uc-Cqw" secondAttribute="trailing" constant="24" id="Lbj-7w-SJV"/>
+                            <constraint firstItem="jE7-hu-dQV" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="NZ1-y4-VX6"/>
+                            <constraint firstAttribute="trailing" secondItem="jE7-hu-dQV" secondAttribute="trailing" id="YlW-ZO-FrA"/>
+                            <constraint firstItem="81S-Uc-Cqw" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="24" id="hBE-uk-8Px"/>
+                            <constraint firstItem="jE7-hu-dQV" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="hCw-2d-wCQ"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="jE7-hu-dQV" secondAttribute="bottom" id="iPE-wi-QH3"/>
+                            <constraint firstItem="81S-Uc-Cqw" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="nYm-SK-Oxb"/>
+                        </constraints>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
+                    <navigationItem key="navigationItem" id="YqE-yr-ve0"/>
+                    <connections>
+                        <outlet property="noGoalTextView" destination="81S-Uc-Cqw" id="ks8-QM-lYl"/>
+                        <outlet property="quoteTextView" destination="LWA-iz-kqo" id="k2q-Mz-K2P"/>
+                        <outlet property="quoteTextViewHeightConstraint" destination="eOc-6h-SY6" id="J5D-d5-S9D"/>
+                        <outlet property="tableHeader" destination="6HU-vD-uXS" id="x11-iX-aL7"/>
+                        <outlet property="tableView" destination="jE7-hu-dQV" id="oVf-xa-vhx"/>
+                        <segue destination="GhL-5z-RzT" kind="push" identifier="goalDetailPageSegue" id="gwb-bx-Jtg"/>
+                        <segue destination="d3L-p1-3Ds" kind="modal" identifier="tosSegue" id="TrY-Ud-jqG"/>
+                        <segue destination="diT-mp-xuD" kind="modal" identifier="psSegue" id="m14-Xl-xAv"/>
+                        <segue destination="x4H-yW-aw6" kind="modal" identifier="appFirstRunSegue" id="qnj-Ch-AfW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="579" y="356"/>
+        </scene>
+        <!--Goal Detail View Controller-->
+        <scene sceneID="QJa-yU-pTr">
+            <objects>
+                <viewController id="GhL-5z-RzT" customClass="GoalDetailViewController" customModule="Resolution" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ELr-1p-f7L"/>
+                        <viewControllerLayoutGuide type="bottom" id="9xb-rr-k6K"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Pfb-YQ-R8G">
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="08G-7o-zUG">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="120"/>
+                                <subviews>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fV7-id-vci">
+                                        <rect key="frame" x="8" y="20" width="304" height="45"/>
+                                        <animations/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="45" id="l5W-QD-KHL"/>
+                                        </constraints>
+                                        <color key="textColor" red="0.97387566140000004" green="0.97387566140000004" blue="0.97387566140000004" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JU5-22-83h">
+                                        <rect key="frame" x="89" y="69" width="142" height="21"/>
+                                        <animations/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="142" id="Aqx-me-nWD"/>
+                                            <constraint firstAttribute="height" constant="21" id="aJ0-hP-jOF"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                        <color key="textColor" red="0.85522073412698418" green="0.85522073412698418" blue="0.85522073412698418" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <animations/>
+                                <color key="backgroundColor" red="0.32156862749999998" green="0.29411764709999999" blue="0.91372549020000005" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="JU5-22-83h" firstAttribute="centerX" secondItem="08G-7o-zUG" secondAttribute="centerX" id="4yj-wj-HZ7"/>
+                                    <constraint firstItem="fV7-id-vci" firstAttribute="top" secondItem="08G-7o-zUG" secondAttribute="top" constant="20" id="I2M-Yk-CSm"/>
+                                    <constraint firstAttribute="trailing" secondItem="fV7-id-vci" secondAttribute="trailing" constant="8" id="T5b-Le-8Ar"/>
+                                    <constraint firstItem="fV7-id-vci" firstAttribute="leading" secondItem="08G-7o-zUG" secondAttribute="leading" constant="8" id="dOi-aW-Zfw"/>
+                                    <constraint firstItem="JU5-22-83h" firstAttribute="top" secondItem="fV7-id-vci" secondAttribute="bottom" constant="4" id="ihe-l1-WYa"/>
+                                    <constraint firstAttribute="height" constant="120" id="rff-LS-ujl"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="R2e-rA-p7E">
+                                <rect key="frame" x="0.0" y="120" width="320" height="35"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W53-hj-EaC">
+                                        <rect key="frame" x="8" y="0.0" width="60" height="35"/>
+                                        <animations/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="60" id="oJ5-Gs-8dA"/>
+                                            <constraint firstAttribute="height" constant="35" id="qnK-Kr-oZp"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <state key="normal" title="share">
+                                            <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="didPressShareIcon:" destination="GhL-5z-RzT" eventType="touchUpInside" id="dX5-PU-dn1"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BJL-c9-VOl">
+                                        <rect key="frame" x="130" y="3" width="60" height="28"/>
+                                        <animations/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="28" id="Maw-MT-UYa"/>
+                                            <constraint firstAttribute="width" constant="60" id="QhP-ZZ-Ev3"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                        <state key="normal" title="edit">
+                                            <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="didPressEditIcon:" destination="GhL-5z-RzT" eventType="touchUpInside" id="5nf-mo-COZ"/>
+                                        </connections>
+                                    </button>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="line.png" translatesAutoresizingMaskIntoConstraints="NO" id="BGN-FR-YCs">
+                                        <rect key="frame" x="0.0" y="-5" width="320" height="10"/>
+                                        <animations/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="10" id="KPo-Sj-S9R"/>
+                                        </constraints>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="3" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fIb-Xm-9uz">
+                                        <rect key="frame" x="252" y="4" width="60" height="28"/>
+                                        <animations/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="60" id="6Lk-sA-n8f"/>
+                                            <constraint firstAttribute="height" constant="28" id="X8h-ga-Xiu"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                        <state key="normal" title="delete">
+                                            <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="didPressDeleteButton:" destination="GhL-5z-RzT" eventType="touchUpInside" id="2UC-Za-pva"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <animations/>
+                                <color key="backgroundColor" red="0.90424520499947092" green="0.90424520499947092" blue="0.90424520499947092" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="W53-hj-EaC" firstAttribute="leading" secondItem="R2e-rA-p7E" secondAttribute="leading" constant="8" id="7Zq-Yl-oVg"/>
+                                    <constraint firstItem="BGN-FR-YCs" firstAttribute="top" secondItem="R2e-rA-p7E" secondAttribute="top" constant="-5" id="8RZ-LP-39s"/>
+                                    <constraint firstItem="BJL-c9-VOl" firstAttribute="centerY" secondItem="R2e-rA-p7E" secondAttribute="centerY" id="Kuc-gG-i5R"/>
+                                    <constraint firstItem="W53-hj-EaC" firstAttribute="centerY" secondItem="R2e-rA-p7E" secondAttribute="centerY" id="LF2-lv-qOm"/>
+                                    <constraint firstAttribute="trailing" secondItem="fIb-Xm-9uz" secondAttribute="trailing" constant="8" id="U47-It-0gF"/>
+                                    <constraint firstItem="BGN-FR-YCs" firstAttribute="leading" secondItem="R2e-rA-p7E" secondAttribute="leading" id="U7j-zO-rNN"/>
+                                    <constraint firstItem="fIb-Xm-9uz" firstAttribute="centerY" secondItem="R2e-rA-p7E" secondAttribute="centerY" id="VUB-qz-TBg"/>
+                                    <constraint firstAttribute="trailing" secondItem="BGN-FR-YCs" secondAttribute="trailing" id="bkJ-ep-mhQ"/>
+                                    <constraint firstAttribute="height" constant="35" id="pvI-HX-Mng"/>
+                                    <constraint firstItem="BJL-c9-VOl" firstAttribute="centerX" secondItem="R2e-rA-p7E" secondAttribute="centerX" id="yhK-YU-utW"/>
+                                </constraints>
+                            </view>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="sOa-2J-sfM">
+                                <rect key="frame" x="4" y="206" width="308" height="298"/>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Action Items:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vf5-va-DqC">
+                                <rect key="frame" x="8" y="185" width="120" height="21"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="89U-VP-1tX"/>
+                                    <constraint firstAttribute="width" constant="120" id="cfz-0J-Md0"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="R2e-rA-p7E" firstAttribute="top" secondItem="08G-7o-zUG" secondAttribute="bottom" id="1XV-Dx-FyB"/>
+                            <constraint firstItem="08G-7o-zUG" firstAttribute="top" secondItem="ELr-1p-f7L" secondAttribute="bottom" id="2eK-fr-njU"/>
+                            <constraint firstItem="sOa-2J-sfM" firstAttribute="leading" secondItem="Pfb-YQ-R8G" secondAttribute="leading" constant="4" id="Bor-hv-jxT"/>
+                            <constraint firstAttribute="trailing" secondItem="R2e-rA-p7E" secondAttribute="trailing" id="LsB-hi-wfq"/>
+                            <constraint firstItem="vf5-va-DqC" firstAttribute="top" secondItem="R2e-rA-p7E" secondAttribute="bottom" constant="30" id="QEq-3I-qXD"/>
+                            <constraint firstItem="R2e-rA-p7E" firstAttribute="leading" secondItem="Pfb-YQ-R8G" secondAttribute="leading" id="RFF-RG-bUq"/>
+                            <constraint firstItem="08G-7o-zUG" firstAttribute="leading" secondItem="Pfb-YQ-R8G" secondAttribute="leading" id="RWl-gD-dQF"/>
+                            <constraint firstAttribute="trailing" secondItem="08G-7o-zUG" secondAttribute="trailing" id="WHh-7V-Nya"/>
+                            <constraint firstItem="9xb-rr-k6K" firstAttribute="top" secondItem="sOa-2J-sfM" secondAttribute="bottom" id="dVf-jS-jSQ"/>
+                            <constraint firstItem="sOa-2J-sfM" firstAttribute="top" secondItem="vf5-va-DqC" secondAttribute="bottom" id="iDB-oe-5Bz"/>
+                            <constraint firstItem="vf5-va-DqC" firstAttribute="leading" secondItem="Pfb-YQ-R8G" secondAttribute="leading" constant="8" id="vBg-d1-ZWS"/>
+                            <constraint firstAttribute="trailing" secondItem="sOa-2J-sfM" secondAttribute="trailing" constant="8" id="xLL-lA-b3o"/>
+                        </constraints>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
+                    <navigationItem key="navigationItem" id="hge-rs-lyA"/>
+                    <connections>
+                        <outlet property="descriptionTextView" destination="sOa-2J-sfM" id="eGH-a9-plI"/>
+                        <outlet property="headerViewHeightConstraint" destination="rff-LS-ujl" id="nuM-mT-ry0"/>
+                        <outlet property="titleTextView" destination="fV7-id-vci" id="cE1-zd-uOX"/>
+                        <outlet property="titleTextViewHeightConstraint" destination="l5W-QD-KHL" id="q4d-KI-CBl"/>
+                        <outlet property="weeklyReminderLabel" destination="JU5-22-83h" id="HJg-H1-2Hw"/>
+                        <segue destination="3ve-zg-E00" kind="modal" identifier="editResolutionSegue" id="ART-3v-lZ2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Mp2-6G-ilh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="579" y="1091"/>
+        </scene>
+        <!--Add Goal View Controller-->
+        <scene sceneID="DSG-hK-LnD">
+            <objects>
+                <viewController id="3ve-zg-E00" customClass="AddGoalViewController" customModule="Resolution" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="0OJ-Ho-DVw"/>
+                        <viewControllerLayoutGuide type="bottom" id="ofW-5a-wGB"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="pTi-Pb-UnV">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="K7z-MB-g7i">
+                                <rect key="frame" x="0.0" y="64" width="320" height="134"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Goal Title:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e9S-YC-h1r">
+                                        <rect key="frame" x="8" y="8" width="78" height="21"/>
+                                        <animations/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="78" id="3Hw-lO-YTr"/>
+                                            <constraint firstAttribute="height" constant="21" id="95n-pl-xqw"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="ex. 'Workout 4 times a week'" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XZ9-0A-DzY">
+                                        <rect key="frame" x="8" y="33" width="304" height="30"/>
+                                        <animations/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="7at-RL-zyk"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Weekly reminders:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cxO-Wk-9pC">
+                                        <rect key="frame" x="8" y="76" width="142" height="21"/>
+                                        <animations/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="21" id="Zdf-5j-mZD"/>
+                                            <constraint firstAttribute="width" constant="142" id="qCF-yi-pva"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="I0u-Zw-J54">
+                                        <rect key="frame" x="8" y="99" width="218" height="29"/>
+                                        <animations/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="218" id="2EP-xC-dU7"/>
+                                            <constraint firstAttribute="height" constant="28" id="HgS-c0-haf"/>
+                                        </constraints>
+                                        <segments>
+                                            <segment title="1"/>
+                                            <segment title="2"/>
+                                            <segment title="3"/>
+                                        </segments>
+                                        <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </segmentedControl>
+                                </subviews>
+                                <animations/>
+                                <color key="backgroundColor" red="0.32156862749999998" green="0.29411764709999999" blue="0.91372549020000005" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="e9S-YC-h1r" firstAttribute="leading" secondItem="K7z-MB-g7i" secondAttribute="leading" constant="8" id="OPp-Ju-DRl"/>
+                                    <constraint firstItem="XZ9-0A-DzY" firstAttribute="top" secondItem="e9S-YC-h1r" secondAttribute="bottom" constant="4" id="Oqh-n8-PA6"/>
+                                    <constraint firstItem="cxO-Wk-9pC" firstAttribute="top" secondItem="XZ9-0A-DzY" secondAttribute="bottom" constant="13" id="QYq-7y-ERW"/>
+                                    <constraint firstItem="e9S-YC-h1r" firstAttribute="top" secondItem="K7z-MB-g7i" secondAttribute="top" constant="8" id="QjZ-Sm-DfX"/>
+                                    <constraint firstAttribute="trailing" secondItem="XZ9-0A-DzY" secondAttribute="trailing" constant="8" id="Qja-Tq-1en"/>
+                                    <constraint firstItem="I0u-Zw-J54" firstAttribute="leading" secondItem="K7z-MB-g7i" secondAttribute="leading" constant="8" id="QtZ-Ac-hqN"/>
+                                    <constraint firstAttribute="height" constant="134" id="TtB-S8-uai"/>
+                                    <constraint firstItem="XZ9-0A-DzY" firstAttribute="leading" secondItem="K7z-MB-g7i" secondAttribute="leading" constant="8" id="ZxY-pf-HAa"/>
+                                    <constraint firstItem="I0u-Zw-J54" firstAttribute="top" secondItem="cxO-Wk-9pC" secondAttribute="bottom" constant="2" id="sBW-GA-DfU"/>
+                                    <constraint firstItem="cxO-Wk-9pC" firstAttribute="leading" secondItem="K7z-MB-g7i" secondAttribute="leading" constant="8" id="uoF-aO-Uxt"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eKr-gw-iqF">
+                                <rect key="frame" x="0.0" y="198" width="320" height="156"/>
+                                <subviews>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="List some action items to keep yourself on track" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="FzD-T7-UVW">
+                                        <rect key="frame" x="8" y="45" width="304" height="100"/>
+                                        <animations/>
+                                        <color key="backgroundColor" red="0.95865162039999996" green="0.95865162039999996" blue="0.95865162039999996" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="100" id="3Wy-03-bxc"/>
+                                        </constraints>
+                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Action Items:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qDU-gU-mNT">
+                                        <rect key="frame" x="8" y="20" width="100" height="21"/>
+                                        <animations/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="100" id="lrm-nr-cUT"/>
+                                            <constraint firstAttribute="height" constant="21" id="ukn-U8-P4M"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="qDU-gU-mNT" firstAttribute="leading" secondItem="eKr-gw-iqF" secondAttribute="leading" constant="8" id="Cho-Dt-hr9"/>
+                                    <constraint firstAttribute="trailing" secondItem="FzD-T7-UVW" secondAttribute="trailing" constant="8" id="J5i-HH-Uxk"/>
+                                    <constraint firstItem="FzD-T7-UVW" firstAttribute="top" secondItem="qDU-gU-mNT" secondAttribute="bottom" constant="4" id="RBt-1Y-hWY"/>
+                                    <constraint firstItem="FzD-T7-UVW" firstAttribute="leading" secondItem="eKr-gw-iqF" secondAttribute="leading" constant="8" id="RMY-0u-l9O"/>
+                                    <constraint firstItem="qDU-gU-mNT" firstAttribute="top" secondItem="eKr-gw-iqF" secondAttribute="top" constant="20" id="lfV-uU-vhS"/>
+                                    <constraint firstAttribute="height" constant="156" id="wV6-tD-Ncn"/>
+                                </constraints>
+                            </view>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4a1-Rj-Dum">
+                                <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="JRs-Ob-ii6"/>
+                                </constraints>
+                                <items>
+                                    <navigationItem title="New Goal" id="11C-Nh-wys">
+                                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="Ate-Je-x0X">
+                                            <connections>
+                                                <action selector="didPressCancel:" destination="3ve-zg-E00" id="DGG-b6-Y0X"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="peV-1q-tL4">
+                                            <connections>
+                                                <action selector="didPressSave:" destination="3ve-zg-E00" id="WXC-Kg-rKK"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="egQ-WD-GV7">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="20"/>
+                                <animations/>
+                                <color key="backgroundColor" red="0.97387566137566139" green="0.97387566137566139" blue="0.97387566137566139" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="ZTx-SJ-Mnn"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="eKr-gw-iqF" firstAttribute="top" secondItem="K7z-MB-g7i" secondAttribute="bottom" id="0vL-Bi-BZl"/>
+                            <constraint firstItem="egQ-WD-GV7" firstAttribute="top" secondItem="pTi-Pb-UnV" secondAttribute="top" id="2op-L6-zgt"/>
+                            <constraint firstAttribute="trailing" secondItem="eKr-gw-iqF" secondAttribute="trailing" id="4Tz-On-HJW"/>
+                            <constraint firstItem="egQ-WD-GV7" firstAttribute="leading" secondItem="pTi-Pb-UnV" secondAttribute="leading" id="AfY-GP-gZ9"/>
+                            <constraint firstItem="4a1-Rj-Dum" firstAttribute="leading" secondItem="pTi-Pb-UnV" secondAttribute="leading" id="B76-3T-wRS"/>
+                            <constraint firstItem="eKr-gw-iqF" firstAttribute="leading" secondItem="pTi-Pb-UnV" secondAttribute="leading" id="E0G-eA-2nT"/>
+                            <constraint firstAttribute="trailing" secondItem="K7z-MB-g7i" secondAttribute="trailing" id="I2q-4u-TAp"/>
+                            <constraint firstItem="K7z-MB-g7i" firstAttribute="top" secondItem="4a1-Rj-Dum" secondAttribute="bottom" id="Kcp-ah-2Ub"/>
+                            <constraint firstAttribute="trailing" secondItem="egQ-WD-GV7" secondAttribute="trailing" id="qms-mk-No4"/>
+                            <constraint firstItem="4a1-Rj-Dum" firstAttribute="top" secondItem="0OJ-Ho-DVw" secondAttribute="bottom" id="tab-qI-G1y"/>
+                            <constraint firstAttribute="trailing" secondItem="4a1-Rj-Dum" secondAttribute="trailing" id="uBa-G4-Jc4"/>
+                            <constraint firstItem="K7z-MB-g7i" firstAttribute="leading" secondItem="pTi-Pb-UnV" secondAttribute="leading" id="yhN-uc-zKP"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="descriptionText" destination="FzD-T7-UVW" id="Uii-4j-bxy"/>
+                        <outlet property="descriptionView" destination="eKr-gw-iqF" id="SGV-Mo-eIO"/>
+                        <outlet property="editingHeaderView" destination="K7z-MB-g7i" id="HwK-8h-oYo"/>
+                        <outlet property="reminderSegmentControl" destination="I0u-Zw-J54" id="BZo-wY-Ubb"/>
+                        <outlet property="titleField" destination="XZ9-0A-DzY" id="ohJ-af-7cF"/>
+                        <outlet property="topdescriptionViewConstraint" destination="0vL-Bi-BZl" id="AEu-1M-evR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="R6J-gg-ReA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1511" y="376"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="bBN-es-CWU">
+            <objects>
+                <viewController id="d3L-p1-3Ds" customClass="TOSViewController" customModule="Resolution" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="3bS-m2-OLQ"/>
+                        <viewControllerLayoutGuide type="bottom" id="fkp-MV-vfw"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Cfg-hd-uLQ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Acj-mc-8Fo">
+                                <rect key="frame" x="0.0" y="71" width="320" height="497"/>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <mutableString key="text">STRIVE TERMS OF USE
+These Terms and Conditions (the “Terms”) are a contract between you and KEFI LABS LLC. This document explains how you are permitted to use the Strive mobile application and services and any content found on it (the “Services”). Unless otherwise specified, all references to the “Services” include the services available through the Strive mobile application as well as any software that KEFI LABS LLC provides to you that allows you to access the Services from a mobile device. By using the Services, you are agreeing to all of the Terms; if you do not agree with any of these Terms, do not access or otherwise use the Services.
+
+KEFI LABS LLC may make changes to the content and Services at any time. KEFI LABS LLC can change, update, add or remove provisions of these Terms, at any time by posting the updated Terms on the Services or by notifying you via the App. By using the Services after KEFI LABS LLC has updated the Terms, you are agreeing to all the updated Terms; if you do not agree with any of the updated Terms, you must stop using Services.
+
+
+GENERAL USE
+The Services may not be available in all locations, and we may block access to the Services from certain locations based on your device’s geolocation data; we also may add or remove areas in which the Services are not available at any time, without any notice.
+By using the services, you acknowledge and agree that you are at least 18 years of age or an emancipated minor (“Minor”), or possess legal parental or guardian consent, and are fully able and competent to enter into the terms, conditions, obligations, affirmations, and warranties set forth in these Terms. If you are a parent or legal guardian of a Minor, you hereby agree to bind the Minor to these Terms and to fully indemnify and hold harmless KEFI LABS LLC if the Minor breaches any of these Terms. 
+You are responsible for your uses of the Services, or any Content you post to the Services, and for any consequences thereof. The Content you submit, post, or propagate will be able to be viewed by other uses of the Services. Thus, only provide Content that you are comfortable sharing with others under the Terms. Although work is spread to users anonymously, action may be taken to remove content if it is found inappropriate. 
+
+CONTENT
+The Services consist of features that allow users to create their own resolutions (“goals”) to be weekly reminded of. You are responsible for any information, opinions, messages, comments, photos, videos, graphics, sounds and other Content or material that you submit, post, spread, or otherwise make available on or through the Services (each a “Submission”) and through the Services available in connection with the Services. We reserve the right to retain your Submissions, even after they have expired from view within the App or even after you have deleted them. However, you agree that we have no obligation to retain any Submission for any period of time, nor shall we be responsible or liable to you or any third party for any lost Content or losses related to the expiration or deletion of a Submission.
+You may not upload, post or otherwise make available on the Services any material protected by copyright, trademark, or any other proprietary right without the express permission of the owner of such copyright, trademark or other proprietary right owned by a third-party, and the burden of determining whether any material is protected by any such right is on you. You shall be solely liable for any damage resulting from any infringement of copyrights, trademarks, proprietary rights, violation of contract, privacy or publicity rights or any other harm resulting from any Submission that you make. You have full responsibility for each Submission you make, including its legality, reliability and appropriateness. Under no circumstances will KEFI LABS LLC be liable in any way for any Content, including, but not limited to, any errors or omissions in any Content, or any loss or damage of any kind incurred as a result of the use of any Content posted, emailed, transmitted, or otherwise made available the Services. 
+Unless otherwise explicitly stated herein, you agree that any Submission provided by you in connection with the Services is provided on a non-proprietary and non-confidential basis. You hereby grant to KEFI LABS LLC a non-exclusive, perpetual, royalty-free, fully paid-up, worldwide license (including the right to sublicense through multiple tiers) to use, reproduce, process, adapt, publicly perform, publicly display, modify, prepare derivative works, publish, transmit and distribute each of your Submissions, or any portion thereof, in any form, medium or distribution method now known or hereafter existing, known or developed, and authorize others to use the Submissions. We may change or modify Submissions in order to transmit, display or distribute them over computer networks and in various media and/or make changes to the Submissions as necessary to conform and adapt them to any requirements or limitations of any networks, devices, services or media. The main purposes of KEFI LABS LLC using your Submissions is to market and advertise our content, and will be extremely rare. PLEASE NOTE THAT IF YOU FIND US USING SUBMISSIONS OF YOURS IN A WAY THAT DOES NOT MAKE YOU COMFORTABLE, WE WILL TAKE NOTE TO USE IT OR ALTER IT UPON REQUEST. Please email getStrive@gmail.com for inquiries.
+You agree to pay for all royalties, fees, damages and any other monies owing any person by reason of any Submissions posted by you to or through the Services. When you provide Submissions you agree that those Submissions shall not be in violation of the “Unauthorized Activities” paragraph below. Those prohibitions do not require KEFI LABS LLC to monitor, police or remove any Submissions or other information submitted by you or any other user.
+
+
+UNAUTHORIZED ACTIVITIES
+When using the Services and/or the services, you agree not to:
+-Defame, abuse, harass, stalk, threaten, or otherwise violate the legal rights (such as rights of privacy and publicity) of others users and their affiliated institutions.
+-Use racially or ethnically offensive language.
+-Discuss or incite illegal activity.
+-Post anything that exploits children or minors (including pornography that depicts minors) or that depicts cruelty to animals.
+-Post any copyrighted or trademarked materials without the express permission from the owner.
+-Disseminate any unsolicited or unauthorized advertising, promotional materials, ‘junk mail’, ‘spam’, ‘chain letters’, ‘pyramid schemes’, or any other form of such solicitation.
+-Use any robot, spider, scraper or other automated means to access the Services.
+-Take any action that imposes an unreasonable or disproportionately large load on our server infrastructure.
+-Alter the opinions or comments posted by others on the Services.
+-Post anything contrary to our public image, goodwill or reputation.
+This list of prohibitions provides examples and is not complete or exclusive. KEFI LABS LLC reserves the right to terminate access to your account, your ability to post to the Services (or use the Services) as well as refuse, delete or remove any Submissions; with or without cause and with or without notice, for any reason or no reason, or for any action that KEFI LABS LLC determines is inappropriate or disruptive to the Services or users of the Services. KEFI LABS LLC may report to law enforcement authorities any actions that may be illegal, and any reports it receives of such conduct. When legally required or at KEFI LABS LLC’s discretion, KEFI LABS LLC will cooperate with law enforcement agencies in any investigation of alleged illegal activity on the Services or on the Internet.
+Unauthorized use of any Materials or Third-Party Content contained in the Services may violate certain laws and regulations. You agree to indemnify and hold KEFI LABS LLC and its officers, directors, employees, affiliates, agents, licensors, and business partners harmless from and against any and all costs, damages, liabilities, and expenses (including attorneys’ fees and costs of defense) KEFI LABS LLC or any other indemnified party suffers in relation to, arising from, or for the purpose of avoiding, any claim or demand from a third-party that your use of the Services or the use of the Services by any person using your user name and/or password (including without limitation, your participation in the posting areas or, your Submissions) violates any applicable law or regulation, or the copyrights, trademark rights or other rights of any third-party.
+
+
+COPYRIGHT POLICY
+KEFI LABS LLC respects intellectual property rights of others and expects users of the Services to do so as well. KEFI LABS LLC will respond to notices of copyright infringement that comply with applicable law and are properly provided to the firm. If appropriate, KEFI LABS LLC will restrict access or delete such Content that infringes a third party’s copyright and, in KEFI LABS LLC’s sole discretion and without notice, terminate a user’s account if there are repeated instances of infringement. 
+if you become aware of content on these services of the Strive application that infringe on copyrights that you own or control, you may file a notice of infringement, in compliance with the requirements of 17 U.S.C § 512(c)(3) to kefiapp@gmail.com
+
+
+DISCLAIMER OF WARRANTIES
+Your use of the Services and/or the Services is at your own risk. The Materials have not been verified or authenticated in whole or in part by KEFI LABS LLC, and they may include inaccuracies or typographical or other errors. KEFI LABS LLC does not warrant the accuracy of timeliness of the Materials contained on the Services. KEFI LABS LLC has no liability for any loss of, or errors or omissions in Submissions, or for any errors or omissions in the Materials, whether provided by KEFI LABS LLC, our licensors or suppliers or other users.
+KEFI LABS LLC, FOR ITSELF AND ITS LICENSORS, MAKES NO EXPRESS, IMPLIED OR STATUTORY REPRESENTATIONS, WARRANTIES, OR GUARANTEES IN CONNECTION WITH THE SERVICES, THE SERVICES, OR ANY MATERIALS RELATING TO THE QUALITY, SUITABILITY, TRUTH, ACCURACY OR COMPLETENESS OF ANY INFORMATION OR MATERIAL CONTAINED OR PRESENTED ON THE SERVICES, INCLUDING WITHOUT LIMITATION THE MATERIALS. UNLESS OTHERWISE EXPLICITLY STATED, TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, THE SERVICES, THE SERVICES, AND MATERIALS AND ANY INFORMATION OR MATERIAL CONTAINED OR PRESENTED ON THE SERVICES IS PROVIDED TO YOU ON AN “AS IS,” “AS AVAILABLE” AND “WHERE-IS” BASIS WITH NO WARRANTY OF IMPLIED WARRANTY OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, OR NON-INFRINGEMENT OF THIRD-PARTY RIGHTS. KEFI LABS LLC DOES NOT PROVIDE ANY WARRANTIES AGAINST VIRUSES, SPYWARE OR MALWARE THAT MAY BE INSTALLED ON YOUR COMPUTER.
+
+
+LIMITATION OF LIABILITY
+KEFI LABS LLC SHALL NOT BE LIABLE TO YOU FOR ANY DAMAGES RESULTING FROM YOUR DISPLAYING, COPYING, OR DOWNLOADING ANY MATERIALS TO OR FROM THE SERVICES. IN NO EVENT SHALL KEFI LABS LLC BE LIABLE TO YOU FOR ANY INDIRECT, EXTRAORDINARY, EXEMPLARY, PUNITIVE, SPECIAL, INCIDENTAL, OR CONSEQUENTIAL DAMAGES (INCLUDING LOSS OF DATA, REVENUE, PROFITS, USE OR OTHER ECONOMIC ADVANTAGE) HOWEVER ARISING, EVEN IF KEFI LABS LLC KNOWS THERE IS A POSSIBILITY OF SUCH DAMAGE.
+
+
+LOCAL LAWS
+KEFI LABS LLC controls and operates the Services from its headquarters in the United States of America and the Materials may not be appropriate or available for use in other locations. If you use the Services outside the United States of America, you are responsible for following applicable local laws.
+
+
+DISPUTE RESOLUTION AND ARBITRATION
+By agreeing to these Terms, you agree to indemnify, defend, and hold harmless KEFI LABS LLC from and against any and all complaints, charges, claims, damages, losses, costs, liabilities, and expenses (including attorneys’ fees) due to, arising out of, or relating in any way to (a) your use of the Services, (b) any Content you post, use, spread, distribute, store through the services, (c)your violation of these terms, or (d) your violation of the rights of another. 
+You and KEFI LABS LLC agree to arbitrate any dispute arising from these Terms or your use of the Services, except that you and KEFI LABS LLC are not required to arbitrate any dispute in which either party seeks equitable and other relief for the alleged unlawful use of the copyrights, trademarks, trade names, logos, trade secrets, or patents. ARBITRATION PREVENTS YOU FROM SUING IN COURT OR FROM HAVING A JURY TRIAL. You and KEFI LABS LLC agree that (a) any arbitration will occur in King County Court, Washington, (b) that arbitration will be administered by the American Arbitration Association in accordance with its Commercial Arbitration Rules, and (c) that the state or federal courts of King County Court, Washington have exclusive jurisdiction over any suit, if any, between parties not subject to arbitration.
+
+
+SEVERABILITY
+If any clause within this Provision (other than the Class Action Waiver clause above) is found to be illegal or unenforceable, that clause will be severed from this Provision to in the minimum extent necessary, and the remainder of this Provision will be given full force and effect.
+
+ATTRIBUTION OF MATERIALS. 
+Strive uses icons from Catalin Fertu’s BigMug Line in Interface. The icon set can be found here: http://www.flaticon.com/packs/bigmug-line/. Strive uses these icons throughout the service. 
+
+CONTACT US
+If you have any questions about these Terms or otherwise need to contact KEFI LABS LLC for any reason, you can reach us at getStrive@gmail.com
+</mutableString>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Oeb-MY-yPH">
+                                <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="aRz-HX-TqM"/>
+                                </constraints>
+                                <items>
+                                    <navigationItem title="Terms of Service" id="nRF-Y7-Q6R">
+                                        <barButtonItem key="leftBarButtonItem" systemItem="done" id="sS4-kX-ydv">
+                                            <connections>
+                                                <action selector="doneWasPressed:" destination="d3L-p1-3Ds" id="sfj-CW-Agp"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d9v-p9-jny">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="20"/>
+                                <animations/>
+                                <color key="backgroundColor" red="0.97387566140000004" green="0.97387566140000004" blue="0.97387566140000004" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="HeR-g2-MoG"/>
+                                    <constraint firstAttribute="width" constant="320" id="ptc-Sw-o7y"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="d9v-p9-jny" firstAttribute="leading" secondItem="Cfg-hd-uLQ" secondAttribute="leading" id="3qq-mB-zwi"/>
+                            <constraint firstAttribute="trailing" secondItem="Oeb-MY-yPH" secondAttribute="trailing" id="7fW-0q-Xh1"/>
+                            <constraint firstItem="Oeb-MY-yPH" firstAttribute="top" secondItem="3bS-m2-OLQ" secondAttribute="bottom" id="B6e-8e-cgq"/>
+                            <constraint firstAttribute="trailing" secondItem="Acj-mc-8Fo" secondAttribute="trailing" id="D6d-Y3-Fqh"/>
+                            <constraint firstAttribute="trailing" secondItem="d9v-p9-jny" secondAttribute="trailing" id="DcD-Oc-aQh"/>
+                            <constraint firstItem="d9v-p9-jny" firstAttribute="top" secondItem="Cfg-hd-uLQ" secondAttribute="top" id="NSO-p7-Ujl"/>
+                            <constraint firstItem="Oeb-MY-yPH" firstAttribute="leading" secondItem="Cfg-hd-uLQ" secondAttribute="leading" id="PN6-EN-mbP"/>
+                            <constraint firstItem="Acj-mc-8Fo" firstAttribute="top" secondItem="Oeb-MY-yPH" secondAttribute="bottom" constant="7" id="W7N-UQ-K4u"/>
+                            <constraint firstAttribute="bottom" secondItem="Acj-mc-8Fo" secondAttribute="bottom" id="mMC-us-8tF"/>
+                            <constraint firstItem="Acj-mc-8Fo" firstAttribute="leading" secondItem="Cfg-hd-uLQ" secondAttribute="leading" id="oxf-7s-mYB"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="db8-in-EBm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1528" y="-975"/>
+        </scene>
+        <!--First Run View Controller-->
+        <scene sceneID="8me-ZS-8wX">
+            <objects>
+                <viewController id="x4H-yW-aw6" customClass="FirstRunViewController" customModule="Resolution" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="3L9-0V-z7W"/>
+                        <viewControllerLayoutGuide type="bottom" id="scd-Pv-fjw"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="e39-RP-nGg">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U53-XF-WFz">
+                                <rect key="frame" x="68" y="333" width="185" height="58"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="185" id="dkx-IS-D5i"/>
+                                    <constraint firstAttribute="height" constant="58" id="kGO-F1-cAf"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="38"/>
+                                <state key="normal" title="Sign in">
+                                    <color key="titleColor" red="0.32156862749999998" green="0.29411764709999999" blue="0.91372549020000005" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="didPressContinue:" destination="x4H-yW-aw6" eventType="touchUpInside" id="CVC-ws-h2z"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Strive" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cjV-2Z-7jF">
+                                <rect key="frame" x="81" y="70" width="158" height="43"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="158" id="2Sf-c9-QD9"/>
+                                    <constraint firstAttribute="height" constant="43" id="PNC-Lw-Tt0"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="57"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="By continuing, you agree to our" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HRw-Yc-L18">
+                                <rect key="frame" x="8" y="539" width="165" height="21"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="IfA-1z-7P3"/>
+                                    <constraint firstAttribute="width" constant="165" id="M3C-mx-1TP"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ibv-Al-rzk">
+                                <rect key="frame" x="170" y="539" width="43" height="21"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="43" id="fFM-xo-hgq"/>
+                                    <constraint firstAttribute="height" constant="21" id="xBO-KW-e5o"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="11"/>
+                                <state key="normal" title="Terms">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="d3L-p1-3Ds" kind="modal" id="mo6-2j-Q0C"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="and" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ww5-wx-uKn">
+                                <rect key="frame" x="211" y="539" width="29" height="21"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="29" id="I3q-Qm-vih"/>
+                                    <constraint firstAttribute="height" constant="21" id="JFQ-Q7-21g"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fTN-uo-uhq">
+                                <rect key="frame" x="232" y="539" width="80" height="21"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="gVb-zf-O8o"/>
+                                    <constraint firstAttribute="width" constant="80" id="pJe-X3-V3u"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="11"/>
+                                <state key="normal" title="Privacy Policy">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="diT-mp-xuD" kind="modal" id="Dfd-ED-zBZ"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Strive lets you create weekly goals and sends you notifications and a weekly email to keep you on track" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Mm-xt-eaU">
+                                <rect key="frame" x="43" y="123" width="234" height="100"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="234" id="Gtl-xj-BTY"/>
+                                    <constraint firstAttribute="height" constant="100" id="O3L-gx-Mtl"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" red="0.98030340608465605" green="0.98030340608465605" blue="0.98030340608465605" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="Ibv-Al-rzk" firstAttribute="leading" secondItem="HRw-Yc-L18" secondAttribute="trailing" constant="-3" id="1WQ-X8-I56"/>
+                            <constraint firstItem="scd-Pv-fjw" firstAttribute="top" secondItem="Ibv-Al-rzk" secondAttribute="bottom" constant="8" id="2dc-EY-8B4"/>
+                            <constraint firstItem="fTN-uo-uhq" firstAttribute="leading" secondItem="Ww5-wx-uKn" secondAttribute="trailing" constant="-8" id="3Zp-jz-n7I"/>
+                            <constraint firstItem="scd-Pv-fjw" firstAttribute="top" secondItem="Ww5-wx-uKn" secondAttribute="bottom" constant="8" id="AA2-Ns-Psh"/>
+                            <constraint firstItem="HRw-Yc-L18" firstAttribute="leading" secondItem="e39-RP-nGg" secondAttribute="leading" constant="8" id="Bc2-Fs-zex"/>
+                            <constraint firstItem="cjV-2Z-7jF" firstAttribute="top" secondItem="3L9-0V-z7W" secondAttribute="bottom" constant="50" id="Go9-Hd-bIv"/>
+                            <constraint firstItem="9Mm-xt-eaU" firstAttribute="centerX" secondItem="e39-RP-nGg" secondAttribute="centerX" id="HaF-IL-fow"/>
+                            <constraint firstItem="9Mm-xt-eaU" firstAttribute="top" secondItem="cjV-2Z-7jF" secondAttribute="bottom" constant="10" id="KIg-qo-YuN"/>
+                            <constraint firstItem="cjV-2Z-7jF" firstAttribute="centerX" secondItem="e39-RP-nGg" secondAttribute="centerX" id="WKe-AR-6oF"/>
+                            <constraint firstItem="U53-XF-WFz" firstAttribute="centerX" secondItem="e39-RP-nGg" secondAttribute="centerX" id="bcK-Iu-QhZ"/>
+                            <constraint firstItem="U53-XF-WFz" firstAttribute="top" secondItem="9Mm-xt-eaU" secondAttribute="bottom" constant="110" id="ecn-hD-scP"/>
+                            <constraint firstItem="Ww5-wx-uKn" firstAttribute="leading" secondItem="HRw-Yc-L18" secondAttribute="trailing" constant="38" id="flS-bl-ze0"/>
+                            <constraint firstItem="scd-Pv-fjw" firstAttribute="top" secondItem="HRw-Yc-L18" secondAttribute="bottom" constant="8" id="h1u-BR-gNk"/>
+                            <constraint firstItem="scd-Pv-fjw" firstAttribute="top" secondItem="fTN-uo-uhq" secondAttribute="bottom" constant="8" id="xjk-uU-wzo"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <segue destination="fN3-Pf-qWY" kind="unwind" identifier="unwindToViewControllerSegue" unwindAction="unwindToViewController:" id="bXO-2H-qi7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jUw-qM-Vi7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="fN3-Pf-qWY" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="567" y="-348"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Zl8-ut-C6f">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Bpo-Qx-fD0" sceneMemberID="viewController">
+                    <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="tE8-ry-XnJ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="q40-Td-bLN"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Dxo-Xy-Frq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="173" y="356"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Np4-kh-s6a">
+            <objects>
+                <viewController id="diT-mp-xuD" customClass="PSViewController" customModule="Resolution" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="sR3-fD-A4s"/>
+                        <viewControllerLayoutGuide type="bottom" id="iSA-oF-Liw"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="jcC-z9-34g">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kUv-re-04N">
+                                <rect key="frame" x="0.0" y="71" width="320" height="497"/>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <mutableString key="text">STRIVE PRIVACY STATEMENT
+
+This privacy policy governs your use of the software application Strive (“Application”) for mobile devices that was created by Kefi Labs LLC. The Application allows users to post content and send it to fellow users nearby. 
+
+USER PROVIDED INFO
+The Application obtains the information you provide when you download and register the Application. The purpose of this is to link resolutions (“goals”) yous submit to the service to your account. We also collect your email in order to send you 1 weekly reminder of goals you set. 
+
+In addition, the Application may collect certain information automatically, including, but not limited to, the type of mobile device you use, your mobile devices unique device ID, the Application version, and information about the way you use the Application. 
+Take note that the Application asks for access to your Facebook account, which you provide to (a) provide your name, (b) your friends who have also installed the application, and (c) your profile picture. 
+We may also use the information you provided us to contact you from time to time to provide you with important information, required notices and marketing promotions.
+
+THIRD PARTY INFORMATION ACCESS
+We will share your information with third parties only in the ways that are described in this privacy statement.
+We may disclose User Provided and Automatically Collected Information:
+-as required by law, such as to comply with a subpoena, or similar legal process;
+-when we believe in good faith that disclosure is necessary to protect our rights, protect your safety or the safety of others, investigate fraud, or respond to a government request;
+-with our trusted services providers who work on our behalf, do not have an independent use of the information we disclose to them, and have agreed to adhere to the rules set forth in this privacy statement.
+-if Kefi Labs LLC is involved in a merger, acquisition, or sale of all or a portion of its assets, you will be notified via email and/or a prominent notice on our Web site of any change in ownership or uses of this information, as well as any choices you may have regarding this information.
+
+OPT-OUT RIGHTS
+You can stop all collection of information by the Application easily by uninstalling the Application. You may use the standard uninstall processes as may be available as part of your mobile device or via the mobile application marketplace or network. 
+
+MANAGING YOUR INFORMATION
+We will retain User Provided data for as long as you use the Application and for a reasonable time thereafter. We will retain Automatically Collected information for up to 48 months and thereafter may store it in aggregate. If you’d like us to delete User Provided Data that you have provided via the Application, please contact us at getStrive@gmail.com and we will respond in a reasonable time. Please note that some or all of the User Provided Data may be required in order for the Application to function properly.
+
+CHILDREN
+We do not use the Application to knowingly solicit data from or market to children under the age of 13. If a parent or guardian becomes aware that his or her child has provided us with information without their consent, he or she should contact us at getStrive@gmail.com. We will delete such information from our files within a reasonable time.
+
+SECURITY
+We are concerned about safeguarding the confidentiality of your information. We provide physical, electronic, and procedural safeguards to protect information we process and maintain. For example, we limit access to this information to authorized employees and contractors who need to know that information in order to operate, develop or improve our Application. Please be aware that, although we endeavor provide reasonable security for information we process and maintain, no security system can prevent all potential security breaches.
+ 
+CHANGES
+This Privacy Policy may be updated from time to time for any reason. We will notify you of any changes to our Privacy Policy by updating this policy and informing you via email. You are advised to consult this Privacy Policy regularly for any changes, as continued use is deemed approval of all changes.
+ 
+YOUR CONSENT
+By using the Application, you are consenting to our processing of your information as set forth in this Privacy Policy now and as amended by us. "Processing,” means using cookies on a computer/handheld device or using or touching information in any way, including, but not limited to, collecting, storing, deleting, using, combining and disclosing information, all of which activities will take place in the United States. If you reside outside the United States your information will be transferred, processed and stored there under United States privacy standards. 
+
+CONTACT US
+If you have any questions regarding privacy while using the Application, or have questions about our practices, please contact us via email at getStrive@gmail.com
+
+</mutableString>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="y6n-f6-YbC">
+                                <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="nyz-QV-t6L"/>
+                                </constraints>
+                                <items>
+                                    <navigationItem title="Privacy Policy" id="Fzt-2n-7rQ">
+                                        <barButtonItem key="leftBarButtonItem" systemItem="done" id="zz6-WF-ZD5">
+                                            <connections>
+                                                <action selector="doneWasPressed:" destination="diT-mp-xuD" id="kgX-iT-NaO"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rRA-K2-27A">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="20"/>
+                                <animations/>
+                                <color key="backgroundColor" red="0.97387566140000004" green="0.97387566140000004" blue="0.97387566140000004" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="320" id="Je7-n9-tZf"/>
+                                    <constraint firstAttribute="height" constant="20" id="lds-CL-8Oi"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="kUv-re-04N" secondAttribute="bottom" id="5Ha-Bx-RKY"/>
+                            <constraint firstItem="rRA-K2-27A" firstAttribute="leading" secondItem="jcC-z9-34g" secondAttribute="leading" id="Hox-fQ-STy"/>
+                            <constraint firstAttribute="trailing" secondItem="y6n-f6-YbC" secondAttribute="trailing" id="Izw-lT-SPU"/>
+                            <constraint firstItem="y6n-f6-YbC" firstAttribute="top" secondItem="sR3-fD-A4s" secondAttribute="bottom" id="RaX-62-BVc"/>
+                            <constraint firstItem="y6n-f6-YbC" firstAttribute="leading" secondItem="jcC-z9-34g" secondAttribute="leading" id="STV-i6-3Z0"/>
+                            <constraint firstItem="kUv-re-04N" firstAttribute="top" secondItem="y6n-f6-YbC" secondAttribute="bottom" constant="7" id="gZX-2j-QGx"/>
+                            <constraint firstAttribute="trailing" secondItem="kUv-re-04N" secondAttribute="trailing" id="gc2-np-C1k"/>
+                            <constraint firstAttribute="trailing" secondItem="rRA-K2-27A" secondAttribute="trailing" id="h0S-dA-tK1"/>
+                            <constraint firstItem="kUv-re-04N" firstAttribute="leading" secondItem="jcC-z9-34g" secondAttribute="leading" id="mse-05-88d"/>
+                            <constraint firstItem="rRA-K2-27A" firstAttribute="top" secondItem="jcC-z9-34g" secondAttribute="top" id="weN-RW-HAz"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gTj-Yb-oKh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1543" y="-306"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="add_button.png" width="120" height="120"/>
+        <image name="line.png" width="640" height="40"/>
+    </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="yv1-in-UYP"/>
+        <segue reference="mo6-2j-Q0C"/>
+        <segue reference="Dfd-ED-zBZ"/>
+    </inferredMetricsTieBreakers>
+</document>
